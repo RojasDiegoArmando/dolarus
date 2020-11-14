@@ -5,46 +5,58 @@ import {
   Typography,
   makeStyles,
   IconButton,
-  Button
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
 } from "@material-ui/core"
+import Brightness4Icon from "@material-ui/icons/Brightness4"
 import MenuIcon from "@material-ui/icons/Menu"
 
 const useStyles = makeStyles((theme) => ({
-  offset: theme.mixins.toolbar,
   menuButton: {
     marginRight: theme.spacing(2),
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
   },
   tittle: {
-      flexGrow: 1
-  }
+    flexGrow: 1,
+  },
+  appBar: {
+    [theme.breakpoints.up("sm")]: {
+      width: `calc(100% - ${240}px)`,
+      marginLeft: 240,
+    },
+  },
 }))
 
-const Navbar = () => {
+const Navbar = (props) => {
   const classes = useStyles()
   return (
-    <div>
-      <AppBar position="sticky">
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="menu"
-            className={classes.menuButton}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h5" color="initial" className={classes.tittle}>
-            DolarUs
-          </Typography>
-        <Button 
-        variant="text" 
-        color="inherit"               
+    <AppBar className={classes.appBar}>
+      <Toolbar>
+        <IconButton
+          color="inherit"
+          aria-label="menu"
+          className={classes.menuButton}
+          onClick={() => props.handleDrawerToggle()}
         >
-          LOGIN
-        </Button>
-        </Toolbar>
-      </AppBar>
-      <div className={classes.offset}></div>
-    </div>
+          <MenuIcon />
+        </IconButton>
+        <Typography variant="h5" color="initial" className={classes.tittle}>
+          DolarUs
+        </Typography>
+        <List>
+          <ListItem button>
+            <ListItemIcon>
+              <Brightness4Icon />
+            </ListItemIcon>
+            <ListItemText>DarkMode</ListItemText>
+          </ListItem>
+        </List>
+      </Toolbar>
+    </AppBar>
   )
 }
 
