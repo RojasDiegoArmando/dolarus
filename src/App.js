@@ -4,12 +4,15 @@ import { ThemeProvider } from "@material-ui/core/styles"
 import theme from "./themeConfig"
 import Content from "./components/Content"
 
-const App = () => {  
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
+const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <Content />
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <Content />
+      </ThemeProvider>
+    </Router>
   )
 }
 

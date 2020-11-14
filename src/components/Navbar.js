@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     [theme.breakpoints.up("sm")]: {
-      width: `calc(100% - ${240}px)`,
-      marginLeft: 240,
+      width: `calc(100% - ${150}px)`,
+      marginLeft: 150,
     },
   },
 }))

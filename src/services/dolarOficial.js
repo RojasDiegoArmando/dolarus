@@ -4,7 +4,6 @@ const url = 'https://api-contenidos.lanacion.com.ar/json/V3/economia/cotizacion/
 
 const getOficial = async () => {
     const response = await axios.get(url)
-    console.log(response.data)
     return response.data
 }
 

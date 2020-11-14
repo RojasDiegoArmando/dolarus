@@ -3,29 +3,8 @@ import getBlue from "../services/dolarBlue"
 import getOficial from "../services/dolarOficial"
 import { ValorBlue, ValorOficial } from "./Value"
 import Typography from "@material-ui/core/Typography"
-import Container from "@material-ui/core/Container"
-import { Grid, Paper } from "@material-ui/core"
-/*
-<Typography variant="h2" color="inherit" align="center">
-        Dolar en Argentina
-      </Typography>
-      <Container>
-        <div>
-          <Grid container spacing={1} justify="center">
-            <Grid item>
-              <Paper style={{ height: 130, width: 2000 }}>
-                <ValorBlue valor={dolarBlue} nombre="Blue" />
-              </Paper>
-            </Grid>
-            <Grid item>
-              <Paper style={{ height: 110, width: 2000 }}>
-                <ValorOficial valor={dolarOficial} nombre="Oficial" />
-              </Paper>
-            </Grid>
-          </Grid>
-        </div>
-      </Container>
-      */
+import { Grid, Box } from "@material-ui/core"
+
 const Home = () => {
   const [dolarBlue, setDolarBlue] = useState([])
   const [dolarOficial, setDolarOficial] = useState({})
@@ -36,11 +15,25 @@ const Home = () => {
   }, [])
   return (
     <div>
-      <Typography variant="h2" color="inherit" align="center">
-        Dolar en Argentina
-      </Typography>
-      <ValorBlue valor={dolarBlue} nombre="Blue" /> 
-      <ValorOficial valor={dolarOficial} nombre="Oficial" />     
+      <Grid container>
+        <Grid item xs={12}>
+          <Box px={1} mx={5}>
+            <Typography variant="h2" color="inherit" align="center">
+              Dolar en Argentina
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Box mt={2}>
+            <ValorBlue valor={dolarBlue} nombre="Blue" />
+          </Box>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Box mt={2}>
+            <ValorOficial valor={dolarOficial} nombre="Oficial" />
+          </Box>
+        </Grid>
+      </Grid>
     </div>
   )
 }

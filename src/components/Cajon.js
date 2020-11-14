@@ -2,7 +2,7 @@ import React from "react"
 import { makeStyles, Drawer, Divider } from "@material-ui/core"
 import Listas from "./Listas"
 
-const drawerWidth = 240
+const drawerWidth = 150
 
 const estilos = makeStyles((theme) => ({
   drawer: {
