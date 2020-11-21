@@ -4,7 +4,7 @@ import { ThemeProvider } from "@material-ui/core/styles"
 import theme from "./themeConfig"
 import Content from "./components/Content"
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import { HashRouter as Router } from "react-router-dom"
 
 const App = () => {
   return (
