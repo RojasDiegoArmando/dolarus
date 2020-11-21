@@ -1,26 +1,31 @@
-import React from 'react'
-import 
-const CantidadDolar = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+import React from "react"
+import { TextField } from "@material-ui/core"
+
+const CantidadDolar = ({ cantDolar, handleDolarChange }) => {
+  return (
+    <TextField
+      id="cantDolar"
+      label="USD a vender"
+      variant="outlined"
+      value={cantDolar}
+      onChange={handleDolarChange}
+      onClick={(event) => (event.target.value = "")}
+      on
+    />
+  )
 }
 
-const CantidadPeso = () => {
-    return (
-            <Grid item xs={12} sm={6}>
-             <Box align="center">
-            <TextField
-              id="cantPesos"
-              label="Cantidad de Pesos"
-              variant="outlined"
-              value={cantPeso}
-              onChange={handlePesoChange}
-            />
-          </Box>
-    )
+const CantidadPeso = ({ cantPeso, handlePesoChange }) => {
+  return (
+    <TextField
+      id="cantPesos"
+      label="ARS a recibir"
+      variant="outlined"
+      value={cantPeso}
+      onChange={handlePesoChange}
+      onClick={(event) => (event.target.value = "")}
+    />
+  )
 }
 
-export { CantidadDolar , CantidadPeso }
+export { CantidadDolar, CantidadPeso }
