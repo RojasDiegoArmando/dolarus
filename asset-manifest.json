@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/dolarus/static/css/main.0a2b7634.chunk.css",
+    "main.js": "/dolarus/static/js/main.18ea8a91.chunk.js",
+    "main.js.map": "/dolarus/static/js/main.18ea8a91.chunk.js.map",
+    "runtime-main.js": "/dolarus/static/js/runtime-main.82c6f1f0.js",
+    "runtime-main.js.map": "/dolarus/static/js/runtime-main.82c6f1f0.js.map",
+    "static/js/2.06888dfc.chunk.js": "/dolarus/static/js/2.06888dfc.chunk.js",
+    "static/js/2.06888dfc.chunk.js.map": "/dolarus/static/js/2.06888dfc.chunk.js.map",
+    "index.html": "/dolarus/index.html",
+    "static/css/main.0a2b7634.chunk.css.map": "/dolarus/static/css/main.0a2b7634.chunk.css.map",
+    "static/js/2.06888dfc.chunk.js.LICENSE.txt": "/dolarus/static/js/2.06888dfc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.82c6f1f0.js",
+    "static/js/2.06888dfc.chunk.js",
+    "static/css/main.0a2b7634.chunk.css",
+    "static/js/main.18ea8a91.chunk.js"
+  ]
+}
