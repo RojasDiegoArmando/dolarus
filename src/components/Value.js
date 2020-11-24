@@ -1,34 +1,46 @@
-import React from 'react'
-import { Typography } from '@material-ui/core'
+import React from "react"
+import { Typography } from "@material-ui/core"
 
 const ValorBlue = ({ valor, nombre }) => {
-    const compra = valor.compra
-    const venta = valor.venta    
-    const intermedio = ((parseFloat(compra) + parseFloat(venta)) / 2)
-    return (
-        <div>
-            <Typography variant="h3" color="inherit" align="center">{nombre}</Typography>
-            <Typography variant="body1" color="textSecondary" align="center">
-            Compra: {compra} <br/>
-            Intermedio: {intermedio} <br/>
-            Venta: {venta}
-            </Typography>
-        </div>
-    )
+  let compra = valor.compra
+  let venta = valor.venta
+  compra = (compra ? compra.replace(/,/g,'.') : compra)
+  venta = (venta ? venta.replace(/,/g, '.') : venta)
+  const intermedio = (parseFloat(compra) + parseFloat(venta)) / 2
+  return (
+    <div>
+      <Typography variant="h3" color="inherit" align="center">
+        {nombre}
+      </Typography>
+      <Typography variant="body1" color="textSecondary" align="center">
+        Compra: {compra} <br />
+        Intermedio: {intermedio} <br />
+        Venta: {venta}
+      </Typography>
+    </div>
+  )
 }
 
 const ValorOficial = ({ valor, nombre }) => {
-    const compra = valor.compra
-    const venta = parseInt(valor.venta) * 1.65
-    return (
-        <div>
-            <Typography variant="h3" color="inherit" align="center">{nombre}</Typography>
-            <Typography variant="body1" color="textSecondary" align="center">
-            Compra: {compra} <br/>
-            Venta: {venta} (+65%)
-            </Typography>
-        </div>
-    )
+  let compra = valor.compra
+  compra = (compra ? compra.replace(/,/g, '.') : compra)
+  let venta = valor.venta
+  venta = (venta ? venta.replace(/,/g, ".") : venta)
+  let solidario = venta
+  solidario = (solidario ? solidario.replace(/,/g, '.') : solidario) * 1.65
+  console.log(solidario)
+  return (
+    <div>
+      <Typography variant="h3" color="inherit" align="center">
+        {nombre}
+      </Typography>
+      <Typography variant="body1" color="textSecondary" align="center">
+        Compra: {compra} <br />
+        Venta: {venta} <br />
+        Solidario: {solidario} (65% impuestos)
+      </Typography>
+    </div>
+  )
 }
 
-export {ValorBlue, ValorOficial}
+export { ValorBlue, ValorOficial }
