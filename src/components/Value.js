@@ -14,7 +14,7 @@ const ValorBlue = ({ valor, nombre }) => {
       </Typography>
       <Typography variant="body1" color="textSecondary" align="center">
         Compra: {compra} <br />
-        Intermedio: {intermedio} <br />
+        Intermedio: {intermedio.toFixed(2)} <br />
         Venta: {venta}
       </Typography>
     </div>
@@ -37,7 +37,7 @@ const ValorOficial = ({ valor, nombre }) => {
       <Typography variant="body1" color="textSecondary" align="center">
         Compra: {compra} <br />
         Venta: {venta} <br />
-        Solidario: {solidario} (65% impuestos)
+        Solidario: {solidario.toFixed(2)} (65% impuestos)
       </Typography>
     </div>
   )
