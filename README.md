@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# DolarUs
+This is a Responsive Web Application wich display the Dolar Blue and Dolar Oficial actual values.Constructed with create-react-app - featuring API, Hooks, Router and custom styled components from the [Material UI library](https://material-ui.com/).
+The App has a Calculator to get the profit from the "Pure" operation. Wich consist of buying USD on the offical value and then selling the USD on the "Blue" Value.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- The "Blue" value used to be much higher than the official.(Today this is not worth it)
 
-## Available Scripts
 
-In the project directory, you can run:
+## What did I learned while building this project?
 
-### `npm start`
+- My first React Project and Material UI, really enjoyed the process of learning to use a component library and how to custom these default elements.
+- To use react-router.
+- Consume external API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Deployment
+Deployed with [Github Pages](https://pages.github.com/).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Live Project
+[Here!](https://rojasdiegoarmando.github.io/dolarus/#/)
+## Get started
 
-### `npm test`
+From your command line, first clone this repo:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# Clone this repository
+$ git clone https://github.com/RojasDiegoArmando/dolarus
 
-### `npm run build`
+# Go into the repository
+$ cd dolarus
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Remove current origin repository
+$ git remote remove origin
+```
+Then you can install the dependencies using NPM:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Using NPM:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Install dependencies
+$ npm install
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Start development server
+$ npm start
+```
+You should now have a development server running in your default browser.
